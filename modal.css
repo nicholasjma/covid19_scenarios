@@ -184,15 +184,19 @@
   display: flex;
 }
 .risk-scale.mdl-card {
-  width: 70%;
+  width: calc(100% - 4rem);
   margin: 2rem;
-  margin-left: 15%;
 }
 .risk-scale > .mdl-card__title {
-  padding: 2rem;
+  padding: 0rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: #fff;
+  overflow-x: unset;
+
+}
+.mdl-card__title {
+  overflow-x: scroll;
 }
 
 .odd td {
@@ -214,6 +218,9 @@
 }
 .risk_index_img {
   width: 100%;
+  max-width:500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .topdesc {
   text-align: justify;
