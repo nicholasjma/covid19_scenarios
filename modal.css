@@ -185,7 +185,10 @@
 }
 .risk-scale.mdl-card {
   width: calc(100% - 4rem);
+  max-width: 960px;
   margin: 2rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 .risk-scale > .mdl-card__title {
   padding: 0rem;
@@ -218,7 +221,7 @@
 }
 .risk_index_img {
   width: 100%;
-  max-width:500px;
+  max-width:860px;
   margin-left: auto;
   margin-right: auto;
 }
