@@ -47,7 +47,7 @@
 .modal-content {
   margin: auto;
   display: block;
-  width: calc(100% - 2rem);
+  width: calc(100% - 2rem) !important;
   max-width: 960px;
 }
 
