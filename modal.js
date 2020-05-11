@@ -18,7 +18,7 @@ if (window.self !== window.top) {
 
 function open_image(filename) {
   modal.style.display = "block";
-  modalImg.src = "about:blank";
+  modalImg.src = "";
   modalImg.src = filename;
 }
 
