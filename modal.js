@@ -1,10 +1,10 @@
 // Get the modal
-var modal = parent.document.getElementById("myModal");
+var modal = window.parent.document.getElementById("myModal");
 var img_code = ""
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var modalImg = parent.document.getElementById("img01");
-var captionText = parent.document.getElementById("caption");
+var modalImg = window.parent.document.getElementById("img01");
+var captionText = window.parent.document.getElementById("caption");
 
 function open_image(filename) {
   modal.style.display = "block";
@@ -31,9 +31,9 @@ function switch_summary(e) {
   else {evt.cancelBubble=true;}
 }
 // Get the <span> element that closes the modal
-var span = parent.document.getElementsByClassName("modal_close")[0];
-var span2 = parent.document.getElementsByClassName("modal_summary")[0];
-var span3 = parent.document.getElementsByClassName("modal_forecast")[0];
+var span = window.parent.document.getElementsByClassName("modal_close")[0];
+var span2 = window.parent.document.getElementsByClassName("modal_summary")[0];
+var span3 = window.parent.document.getElementsByClassName("modal_forecast")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
@@ -49,7 +49,7 @@ modal.onclick = function() {
 modalImg.onclick = function() {
 }
 
-parent.document.onkeydown = function(evt) {
+window.parent.document.onkeydown = function(evt) {
     evt = evt || window.event;
     if (evt.keyCode == 27) {
         modal.style.display = "none";
