@@ -1,8 +1,10 @@
 // Get the modal
 if (window.self !== window.top) {
     var modal = window.parent.document.getElementById("myModal");
+    var scrollContainer = window.parent.document.getElementsByClassName("img-scroll-container")[0];
 } else {
     var modal = document.getElementById("myModal");
+    var scrollContainer = document.getElementsByClassName("img-scroll-container")[0];
 };
 
 var img_code = ""
@@ -18,6 +20,11 @@ if (window.self !== window.top) {
 
 function open_image(filename) {
   modal.style.display = "block";
+  if (filename.includes("/scenarios")) {
+    scrollContainer.style["padding-top"] = "50px";
+  } else {
+    scrollContainer.style["padding-top"] = "0";
+  }
   modalImg.src = "";
   modalImg.src = filename;
 }
