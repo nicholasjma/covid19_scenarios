@@ -1,4 +1,3 @@
-/* Style the Image Used to Trigger the Modal */
 #myImg {
   border-radius: 5px;
   cursor: pointer;
@@ -7,21 +6,41 @@
 
 #myImg:hover {opacity: 0.7;}
 
+/* Style the Image Used to Trigger the Modal */
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 100; /* Sit on top */
-  padding-top: 50px; /* Location of the box */
+  padding-top: 0; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
-  height: calc(100% - 50px); /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  overflow-y: initial !important;
+  height: 100%; /* Full height */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
   backdrop-filter: blur(5px);
+}
+
+.modal .img-scroll-container {
+  overflow: auto; /* Enable scroll if needed */
+  overflow-y: initial !important;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 100%;
+  vertical-align: middle;
+  display: flex;
+  text-align: center;
+}
+
+.modal .img-scroll-container div {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  display: inline-block;
 }
 
 /* Modal Content (Image) */
@@ -57,22 +76,22 @@
 
 /* The Close Button */
 .modal_close {
-  position: absolute;
+  position: fixed;
   top: 15px;
-  right: 35px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+  right: 30px;
 }
 
-.modal_close:hover,
-.modal_close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+.modal_summary{
+  position: fixed;
+  top: 75px;
+  right: 30px;
 }
 
+.modal_forecast {
+  position: fixed;
+  top: 135px;
+  right: 30px;
+}
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {
@@ -80,172 +99,3 @@
   }
 }
 
-.styles__content {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.plotly-graph-div {
-  margin: 0 auto;
-}
-
-.mdl-button {
-  padding: 0 0.75rem;
-}
-
-.svg-container {
-  width: 100%;
-}
-
-.valueOuter {
-  padding: 0px !important;
-}
-
-.valueLow {
-  border-color: #008FE0;
-  background-color: #cce9f9;
-  padding: 0px !important;
-}
-
-
-.valueMed {
-  border-color: #bc70c7;
-  background-color: #ead4ee;
-  padding: 0px !important;
-}
-
-.valueHigh {
-  border-color: #e46511;
-  background-color: #f6d0b7;
-  padding: 0px !important;
-}
-
-.valueCritical {
-  border-color: #ae0868;
-  background-color: #e6b4d1;
-  padding: 0px !important;
-}
-
-.innerBorder {
-  border-width: 2px;
-  border-style: solid;
-  width: calc(100% - 1rem);
-  height: calc(100% - 1.2rem);
-  margin: 0.3rem;
-  margin-top:0.4rem;
-}
-.innerBorder span{
-  margin-top:0.6rem;
-  margin-right: 0.3rem;
-  display: inline-block;
-}
-
-.mdl-tabs__panel {
-  overflow-x: auto;
-  padding-top: 2rem;
-}
-
-.mdl-tabs__tab {
-  width: 25%;
-  max-width: 150px;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.center {
-  text-align: center !important;
-}
-
-.counties-heattime.mdl-card {
-  width: 90%;
-  margin: 4rem;
-  margin-left: 5%;
-}
-.states-heattime.mdl-card {
-  width: 90%;
-  margin: 4rem;
-  margin-left: 5%;
-}
-.cbsa-graph.mdl-card {
-  width: 90%;
-  margin: 4rem;
-  margin-left: 5%;
-}
-.csa-graph.mdl-card {
-  width: 90%;
-  margin: 4rem;
-  margin-left: 5%;
-}
-.states-graph.mdl-card {
-  width: 90%;
-  margin: 4rem;
-  margin-left: 5%;
-}
-.countries-graph.mdl-card {
-  width: 90%;
-  margin: 4rem;
-  margin-left: 5%;
-}
-.example_image {
-  width: 450px;
-  display: flex;
-}
-.risk-scale.mdl-card {
-  width: calc(100% - 1rem);
-  max-width: 720px;
-  margin: 2rem;
-  margin-right: auto;
-  margin-left: auto;
-}
-.risk-scale > .mdl-card__title {
-  padding: 0rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: #fff;
-  overflow-x: auto;
-
-}
-.mdl-card__title {
-  overflow-x: auto;
-}
-
-.odd td {
-  background-color: #eeeeee;
-}
-
-.odd:hover td {
-  background-color: #dddddd;
-}
-
-.risk-scale > .mdl-card__menu {
-  color: #fff;
-}
-
-.mdl-card__supporting-text {
-  color: black;
-  font-size: 12pt;
-  padding-bottom: 0
-}
-.risk_index_img {
-  width: 100%;
-  max-width:672px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.topdesc {
-  text-align: justify;
-}
-sub {
-   font-size: .83em !important;
-   vertical-align: -0.25em !important;
-   line-height: 0 !important;
-}
-sup {
-   font-size: .83em !important;
-   vertical-align: 0.25em !important;
-   line-height: 0 !important;
-}
-
-li p {
-    margin-bottom: 0;
-}
