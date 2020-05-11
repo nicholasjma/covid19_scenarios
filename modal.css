@@ -76,19 +76,19 @@
 
 /* The Close Button */
 .modal_close {
-  position: fixed;
+  position: fixed !important;
   top: 15px;
   right: 30px;
 }
 
 .modal_summary{
-  position: fixed;
+  position: fixed !important;
   top: 75px;
   right: 30px;
 }
 
 .modal_forecast {
-  position: fixed;
+  position: fixed !important;
   top: 135px;
   right: 30px;
 }
