@@ -18,14 +18,24 @@ if (window.self !== window.top) {
   var captionText = document.getElementById("caption");
 };
 
+function img_click(e) {
+  var evt = e ? e : window.event;
+  if (evt.stopPropagation) {evt.stopPropagation();}
+  else {evt.cancelBubble=true;}
+}
+
 function open_image(filename) {
   modal.style.display = "block";
   if (filename.includes("/scenarios")) {
     scrollContainer.style["padding-top"] = "50px";
+    scrollContainer.style["padding-bottom"] = "50px";
+    scrollContainer.style["height"] = "calc(100vh - 100px)";
   } else {
     scrollContainer.style["padding-top"] = "0";
+    scrollContainer.style["padding-bottom"] = "0";
+    scrollContainer.style["height"] = "100vh";
   }
-  modalImg.src = "";
+  modalImg.src = "baseline_hourglass_full_white_48dp.png";
   modalImg.src = filename;
 }
 
@@ -65,13 +75,12 @@ span.onclick = function() {
 }
 span2.onclick = switch_summary;
 span3.onclick = switch_forecast;
+modalImg.onclick = img_click;
 
 modal.onclick = function() {
   modal.style.display = "none";
 }
 
-modalImg.onclick = function() {
-}
 
 if (window.self !== window.top) {
   window.parent.document.onkeydown = function(evt) {
