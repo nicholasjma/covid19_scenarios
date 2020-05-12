@@ -70,14 +70,14 @@ if (window.self !== window.top) {
 };
 
 // When the user clicks on <span> (x), close the modal
-span.onTouchTap = function() { 
+span.onclick = function() { 
   modal.style.display = "none";
 }
-span2.onTouchTap = switch_summary;
-span3.onTouchTap = switch_forecast;
-modalImg.onTouchTap = img_click;
+span2.onclick = switch_summary;
+span3.onclick = switch_forecast;
+modalImg.onclick = img_click;
 
-modal.onTouchTap = function() {
+modal.onclick = function() {
   modal.style.display = "none";
 }
 
