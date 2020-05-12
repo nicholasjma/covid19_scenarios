@@ -1,8 +1,0 @@
-applications:
-- name: covid19-py
-  disk_quota: 1G
-  instances: 1
-  memory: 1G
-  routes:
-  - route: covid19-py.apps.corp.centralus.azure.cernercf.io
-  stack: cflinuxfs3
