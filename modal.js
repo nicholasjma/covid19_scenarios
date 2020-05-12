@@ -28,8 +28,8 @@ function open_image(filename) {
   modal.style.display = "block";
   if (filename.includes("/scenarios")) {
     scrollContainer.style["padding-top"] = "50px";
-    scrollContainer.style["padding-bottom"] = "50px";
-    scrollContainer.style["height"] = "calc(100vh - 100px)";
+    scrollContainer.style["padding-bottom"] = "150px";
+    scrollContainer.style["height"] = "calc(100vh - 200px)";
   } else {
     scrollContainer.style["padding-top"] = "0";
     scrollContainer.style["padding-bottom"] = "0";
