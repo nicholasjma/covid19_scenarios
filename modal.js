@@ -27,7 +27,7 @@ function img_click(e) {
 function open_image(filename) {
   var offset = $(document).scrollTop();
   var viewportHeight = $(window).height();
-  modal.style.top = (offset + (viewportHeight / 2)) - $(modal).outerHeight() / 2;
+  modal.style.top = (offset) - $(modal).outerHeight() / 2;
   modal.style.display = "block";
   if (filename.includes("/scenarios") || filename.includes("/all_")) {
     scrollContainer.style["padding-top"] = "50px";
