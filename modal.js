@@ -25,7 +25,7 @@ function img_click(e) {
 }
 
 function open_image(filename) {
-  modal.style.top = window.scrollY
+  modal.style.top = parent.window.scrollY
   modal.style.display = "block";
   if (filename.includes("/scenarios") || filename.includes("/all_")) {
     scrollContainer.style["padding-top"] = "50px";
