@@ -26,6 +26,7 @@ function img_click(e) {
 
 function open_image(filename) {
   var offset = $(document).scrollTop();
+  alert(offset);
   var viewportHeight = $(window).height();
   modal.style.top = (offset) - $(modal).outerHeight() / 2;
   modal.style.display = "block";
