@@ -7428,7 +7428,7 @@ where \(\phi\) is a parameter currently set to 0.8. Note that because the median
 
 <p>Note that because testing data is not available for every country, we do not do a testing adjustment if the data is not available, and for CSA and CBSA, we assume that the state trends in testing apply.</p>
 
-<p>We then use the <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology" target="_blank"><strong>SEIR model</strong></a> to calculate an estimate for R<sub>e</sub> over time and apply a moving average to smooth out short time-scale variations. To parametrize this SEIR model, based on the literature, we assume that the <a href="https://annals.org/aim/fullarticle/2762808/incubation-period-coronavirus-disease-2019-covid-19-from-publicly-reported" target="_blank"><strong>incubation time</strong></a> is 3 days, and the <a href="https://wwwnc.cdc.gov/eid/article/26/7/20-1595_article" target="_blank"><strong>serial interval</strong></a> is 3.96 days.</p>
+<p>We then use the <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology" target="_blank"><strong>SEIR model</strong></a> to calculate an estimate for R<sub>e</sub> over time and apply a moving average to smooth out short time-scale variations. To parametrize this SEIR model, based on the literature, we assume that the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7224694/" target="_blank"><strong>latent period</strong></a> is 3 days, and the <a href="https://wwwnc.cdc.gov/eid/article/26/7/20-1595_article" target="_blank"><strong>serial interval</strong></a> is 3.96 days.</p>
 
 <p>We compute an R<sub>e</sub> value from the mean of the (testing-adjusted) case growth rate and the (time-shifted) deaths growth rate. Because of the time shifting, we do not use the deaths growth rate for the last 14 days before the model is run, and we linearly transition from using the mixture of cases and death growth rates to only deaths growth rate for the period between 14 and 21 days before hte model is run.</p>
 
@@ -7537,7 +7537,7 @@ and estimate the number of cases that will be reported, not the actual total.</p
 
 </div>
 <div class = "mdl-mini-footer__right-section">
- <div class = "mdl-logo">Last Updated May 29, 2020 at 1:22 PM</div>
+ <div class = "mdl-logo">Last Updated May 29, 2020 at 2:29 PM</div>
 </div></footer>
 </main></div>
 <script src="modal.js"></script>
