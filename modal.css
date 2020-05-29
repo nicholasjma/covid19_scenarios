@@ -23,6 +23,19 @@
   backdrop-filter: blur(5px);
 }
 
+.modalDesc {
+  padding: 0;
+  color: black;
+  background-color: white;
+  font-size: 12px;
+  width: calc(100% - 2rem) !important;
+  max-width: 960px;
+  text-align: left;
+}
+.modalDesc p {
+  margin: 1rem;
+}
+
 .modal .img-scroll-container {
   overflow: auto; /* Enable scroll if needed */
   overflow-y: initial !important;

@@ -1,9 +1,11 @@
 // Get the modal
 if (window.self !== window.top) {
     var modal = window.parent.document.getElementById("myModal");
+    var modalDesc = window.parent.document.getElementById("modalDesc");
     var scrollContainer = window.parent.document.getElementsByClassName("img-scroll-container")[0];
 } else {
     var modal = document.getElementById("myModal");
+    var modalDesc = document.getElementById("modalDesc");
     var scrollContainer = document.getElementsByClassName("img-scroll-container")[0];
 };
 
@@ -35,6 +37,14 @@ function open_image(filename) {
     scrollContainer.style["padding-top"] = "0";
     scrollContainer.style["padding-bottom"] = "0";
     scrollContainer.style["height"] = "100vh";
+  }
+  if (filename.includes("/summary/")) {
+    var innerStr = "";
+    innerStr += "<p>The logarithmic growth rate can be thought of as the percentage increase or decrease per day.</p>";
+    // modalDesc.innerHTML = innerStr;
+  }
+  if (filename.includes("/scenarios/")) {
+    // modalDesc.innerHTML = "b";
   }
   modalImg.src = "baseline_hourglass_full_white_48dp.png";
   modalImg.src = filename;
